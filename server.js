@@ -1,3 +1,4 @@
+import dotenv from 'dotenv';
 import express from 'express';
 
 const app = express();
@@ -58,6 +59,10 @@ app.get('/api/jokes' , (req , res)=>{
     ];
     res.send(jokes);
 });
+
+app.get('/jani' , (req , res)=>{
+    res.send("Here is Also Running...")
+})
 
 app.get('/github' , (req , res)=>{
     res.json(githubD);
