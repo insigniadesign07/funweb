@@ -1,6 +1,10 @@
 import dotenv from 'dotenv';
 import connectDB from './db/index.js';
 import { DB_NAME } from './constants.js';
+import express from 'express';
+const app = express();
+
+app.use(express())
 
 
 dotenv.config({
@@ -10,8 +14,7 @@ dotenv.config({
 
 connectDB()
 .then((result) => {
-     app.listen(`${process.env.MONGODB_URI}/
-        ${DB_NAME}`)
+     app.listen(`${process.env.MONGODB_URI}/${DB_NAME}`)
         console.log(`Server is Running..!}`)   
 }).catch((err) => {
     console.log("MONGODB CONNECTION FAILED: " , err)
