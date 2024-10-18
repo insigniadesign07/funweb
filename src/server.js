@@ -68,7 +68,7 @@ app.get('/jaani' , (req , res)=>{
     res.send("Here is Also Running...")
 });
 
-app.get('/github' , (req , res)=>{
+app.get('/ithub' , (req , res)=>{
     res.json(githubD);
 })
 
