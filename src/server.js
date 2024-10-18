@@ -62,7 +62,11 @@ app.get('/api/jokes' , (req , res)=>{
 
 app.get('/jani' , (req , res)=>{
     res.send("Here is Also Running...")
-})
+});
+
+app.get('/jaani' , (req , res)=>{
+    res.send("Here is Also Running...")
+});
 
 app.get('/github' , (req , res)=>{
     res.json(githubD);
